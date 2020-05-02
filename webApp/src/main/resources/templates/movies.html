@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<header th:insert="blocks/header :: header"> </header>
+<div class="container mt-5">
+    <h1>Movies</h1>
+    <div th:each="el : ${movie}" class="alert alert-info mt-2">
+        <p th:text="${el.id}"></p>
+        <h3 th:text="${el.title}"></h3>
+        <p th:text="${el.description}"></p>
+        <a th:href="'/movie/' + ${el.id}" class="btn btn-warning">More</a>
+    </div>
+
+</div>
+
+<div th:insert="blocks/footer :: footer"> </div>
+
+</body>
+</html>

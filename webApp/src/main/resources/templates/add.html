@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Add movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<header th:insert="blocks/header :: header"> </header>
+<div class="container mt-5 mb-5">
+    <h1>Add new movie</h1>
+<form action="/movie/add" method="post">
+    <input type="text" name="title" placeholder="Name" class="form-control"><br>
+    <textarea name="description" placeholder="Description" class="form-control"></textarea><br>
+    <button type="submit" class="btn btn-success">Add</button>
+</form>
+
+</div>
+
+<div th:insert="blocks/footer :: footer"> </div>
+
+</body>
+</html>
